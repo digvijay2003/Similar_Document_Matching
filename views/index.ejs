@@ -1,0 +1,20 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Uploaded Documents</h1>
+<ul>
+  <% for (const document of documents) { %>
+    <li>
+      <%= document.filename %> (<%= document.contentType %>)
+    </li>
+    <br>
+      <img src="<%= document.path%>" alt="<%= document.filename %>" style="width: 200px; height: 150px; border: 1px solid #ddd;">
+  <% } %>
+</ul>
+<a href="http://localhost:5000/docs" >upload docs</a>
+</body>
+</html>
